@@ -76,6 +76,7 @@ public class IsinGenerator {
 
         for (char character : isinWithoutCheckDigit.toCharArray()) {
             if (Character.isLetter(character)) {
+                // Convert letters to ISIN numeric values.
                 numericValue.append(character - 'A' + 10);
             } else {
                 numericValue.append(character);
